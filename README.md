@@ -10,7 +10,7 @@ Simple implementation of a linear chart with 2 lines and dynamic switching using
 - Less code
 - Very good documentation (Lot of examples)
 - Not laggy when switching dataset
-- React wrapper
+- React wrapper: https://github.com/jerairrest/react-chartjs-2 
 - Typescript d.ts
 
 #### Minus
