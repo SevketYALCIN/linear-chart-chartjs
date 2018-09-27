@@ -1,4 +1,4 @@
-# linear-chat-chartjs
+# linear-chart-chartjs
 
 Simple implementation of a linear chart with 2 lines and dynamic switching using [chart.js](https://www.chartjs.org/)
 
