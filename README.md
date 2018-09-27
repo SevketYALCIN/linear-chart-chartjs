@@ -6,6 +6,7 @@ Simple implementation of a linear chart with 2 lines and dynamic switching using
 
 #### Plus
 - Super Easy implementation
+- Good data manipulation
 - Less code
 - Very good documentation (Lot of examples)
 - Not laggy when switching dataset
