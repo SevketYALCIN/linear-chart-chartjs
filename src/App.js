@@ -2,32 +2,57 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { squat } from './data/squat';
-import { deadlift } from './data/deadlift';
+import * as squat from './data/squat.json'
+import * as deadlift from './data/deadlift.json'
+import * as overhead from './data/overhead.json'
+import * as row from './data/row.json'
+import * as bench from './data/bench.json'
+
 import { Scatter } from 'react-chartjs-2';
-import { ChartOptions, ChartData } from 'chart.js';
 
 class App extends Component {
   render() {
-    const data: ChartData = {
+    const data = {
       datasets: [
         {
           label: 'Squat',
           fill: false,
-          data: squat.data,
+          data: squat,
           showLine: true,
-          borderColor: 'rgba(0, 200, 0, 1)'
+          borderColor: 'darkorange'
         },
         {
           label: 'Deadlift',
           fill: false,
-          data: deadlift.data,
+          data: deadlift,
           showLine: true,
-          borderColor: 'rgba(200, 0, 0, 1)'
+          borderColor: 'darkmagenta'
+        },
+        {
+          label: 'Pendlay Row',
+          fill: false,
+          data: row,
+          showLine: true,
+          borderColor: 'darkcyan'
+        },
+        {
+          label: 'Overhead Press',
+          fill: false,
+          data: overhead,
+          showLine: true,
+          borderColor: 'red'
+        },
+        {
+          label: 'Bench Press',
+          fill: false,
+          data: bench,
+          showLine: true,
+          borderColor: 'blue'
         }
+        
       ]
     };
-    const options: ChartOptions = {
+    const options = {
       title: {
         text: 'Chart.js Time Scale'
       },
@@ -54,9 +79,6 @@ class App extends Component {
             scaleLabel: {
               display: true,
               labelString: 'Weight'
-            },
-            ticks: {
-              beginAtZero: true
             }
           }
         ]
